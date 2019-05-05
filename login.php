@@ -28,16 +28,33 @@
 	}
 ?>
 
-<html><body>
-	<div>
-    <form method="POST" action="login.php">
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel = "stylesheet" type = "text/css" href = "styles.css">
+		<title>Login</title>
+	</head>
+	<body>
+	<div class="op">	
+	<div id="login" >
+    <form method="POST" action="login.php" >
         <fieldset>
-            <legend>Login</legend>
-            <input type="text" name="login" placeholder="Login" value="" />
-            <input type="password" name="passwd" placeholder="Password" value="" />
+            <legend>Войти</legend>
+			<input type="text" name="login" placeholder="Логин" value=""/>
+			<br/>
+            <input type="password" name="passwd" placeholder="Пароль" value=""/>
         </fieldset>
         <input type="submit" name="submit" value="OK" />
     </form>
-    <a href="register.php">Create account</a>
- </div>
+	<a href="register.php">Регистрация</a>
+	<br/>
+	</div>
+	</div> 
+	<div class="text" id="formain">
+	<?php 
+		if ($_SERVER[REQUEST_URI] !== "/index.php")
+			echo '<a href="index.php"> На главную </a><br>';
+	?>
+	</div>
 </body></html>

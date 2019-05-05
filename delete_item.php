@@ -45,3 +45,21 @@
     </form>";
     }
 ?>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel = "stylesheet" type = "text/css" href = "styles.css">
+	<title>Корзина</title>
+	</head>
+	<body>
+	<div class="op">
+	</div>
+	<div class="text" id="formain">
+	<?php 
+		if ($_SERVER[REQUEST_URI] !== "/index.php")
+			echo '<a href="index.php"> На главную </a><br>';
+	?>
+	</div>
+</body></html>

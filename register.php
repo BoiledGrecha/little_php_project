@@ -17,20 +17,35 @@
 	}
 	elseif ($_POST["submit"] === "OK")
 	{
-		echo ("Username и Password обязательно должны быть заполнены");
+		echo ("Ник и Пароль обязательно должны быть заполнены");
 	}
 ?>
 
-<html><body>
-	<form method="POST" action="register.php">
-		Username: <input type="text" name="login" value="" />
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel = "stylesheet" type = "text/css" href = "styles.css">
+	<title>Регистрация</title>
+	</head>
+	<body>
+	<div class="op" id="reg">
+	<form method="POST" action="register.php" class="rr">
+		<label>Ник: <input type="text" name="login" value="" /></label>
 		<br />
-		Password: <input type="password" name="passwd" value="" />
+		<label>Пароль: <input type="password" name="passwd" value="" /></label>
 		<br />
-		e-mail: <input type="text" name="mail" value="" />
+		<label>e-mail: <input type="text" name="mail" value="" /></label>
 		<br />
-		Phone number: <input type="text" name="phone" value="" />
+		<label>Номер телефона: <input type="text" name="phone" value="" /></label>
 		<br />
 		<input type="submit" name="submit" value="OK">
 	</form>
+	</div>
+	<div class="text" id="formain">
+	<?php 
+		if ($_SERVER[REQUEST_URI] !== "/index.php")
+			echo '<a href="index.php"> На главную </a><br>';
+	?>
+	</div>
 </body></html>

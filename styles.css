@@ -1,0 +1,73 @@
+body {
+	background:url("imgs/background.jpg");
+	background-size: cover;
+}
+
+.op {
+	background: rgba(255,255,255,0.8);
+
+}
+
+#bord {
+	border:1px solid black;
+}
+
+#log {
+	top: 0;
+	width: 10em;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: 3em;
+	/* position: absolute; */
+}
+
+#login{
+	margin-left: auto;
+    margin-right: auto;
+    width: 6em
+}
+
+#reg{
+	margin-left: auto;
+    margin-right: auto;
+    width: 20em
+}
+
+.text {
+	font-family: Verdana; /* Гарнитура шрифта */ 
+    font-size: 120%; /* Размер текста */ 
+	font-weight: lighter; /* Светлое начертание */ 
+	background: rgba(255,255,255,0.8);
+}
+
+#formain {
+	margin-left: 0;
+    margin-right: auto;
+    width: 7em
+}
+
+.tdd {
+	border: 1px solid black;
+}
+
+#al {
+	text-align: right;
+}
+
+.basket {
+	width: 21%;
+	margin-left: 40%;
+	margin-top: 1%;
+	position: absolute;
+	
+}
+
+#back {
+	background: bisque;
+}
+
+.tab {
+	margin: auto;
+	border: 0px solid black;
+	text-align: center;
+}
