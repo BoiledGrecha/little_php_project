@@ -3,7 +3,6 @@
     
     $str = file_get_contents("categories");
     $str = unserialize($str);
-    // echo "<a class='basket' href=\"basket.php\"> КОРЗИНА </a><br>";
     echo "<table><tr>";
     foreach (array_keys($str) as $j)
         echo "<td><form action=\"catalog.php\" method = \"POST\">
@@ -23,16 +22,13 @@
     }
     if ($_POST["choose"])
     {
-        // дописать для других категорий
         if ($_POST["choose"] === "Все")
         {
             $arr = unserialize(file_get_contents("items"));
-            echo "<table><tr>";
+            echo "<table><tr class = \"catalog\">";
             foreach($arr as $i)
-            // падает страница после ввода почему то
-            // не смог понять почему описание не полностью
                 echo
-                "<td><div><img src =\"".$i["address"]."\"height = 300><br>
+                "<td class = \"catalog_td\"><div><img src =\"".$i["address"]."\"height = 300><br>
                     <div>Название: ".$i["name"]."</div><br>
                     <div>Цена у.е. ".$i["price"]."</div><br>
                     <div>Описание: ".$i["description"]."</div><br></div>
@@ -45,9 +41,8 @@
         }
         else
         {
-            print_r($_POST["choose"]);
             $arr = unserialize(file_get_contents("items"));
-            echo "<table><tr>";
+            echo "<table><tr class = \"catalog\">";
             foreach($arr as $i)
             {
                 foreach($i as $j)
@@ -55,7 +50,7 @@
                     if ($j == $_POST["choose"])
                     {
                         echo
-                        "<td><div><img src =\"".$i["address"]."\"height = 300><br>
+                        "<td class = \"catalog_td\"><div><img src =\"".$i["address"]."\"height = 300><br>
                             <div>Название: ".$i["name"]."</div><br>
                             <div>Цена у.е. ".$i["price"]."</div><br>
                             <div>Описание: ".$i["description"]."</div><br></div>

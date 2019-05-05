@@ -22,8 +22,9 @@
 <body>
 	<div class = "op">
 	<h1 align="center"> TURBOSHMOT.COM</h1><br>
+</div>
 	<div id="log">
-	<a href="basket.php"><table><tr><td> Корзина <td><?PHP include("minimal.php")?></a><br><br>
+	<a href="basket.php"><table><tr class = "catalog"><td> Корзина <td><?PHP include("minimal.php")?></a><br><br>
 	
 	<?PHP   if (!($_SESSION["login"]))
                 include("login.php");

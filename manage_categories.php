@@ -1,10 +1,10 @@
 <?PHP
-session_start();
+    session_start();
     if (!($_SESSION["status"] === "adm"))
         exit("<html><head><title>ERROR</title> </head> <body><div style=\"text-align: center\"><h1> You dont have enougth permits.</h1><img src = \"imgs/urist.JPG\" height = 1000><br><a href = \"index.php\">НА ГАЛВНУЮ</a></div></body></html>");
     $str = unserialize(file_get_contents("categories"));
     echo "<html><body>";
-    
+
     if ($_POST["submit"] === "УДАЛИТЬ")
     {
         unset($str[$_POST["key"]]);

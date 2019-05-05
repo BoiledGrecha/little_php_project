@@ -2,7 +2,15 @@ body {
 	background:url("imgs/background.jpg");
 	background-size: cover;
 }
+.catalog_td{
+	margin : 30;
+}
 
+.catalog{
+
+	display:flex;
+	flex-flow: row wrap;
+}
 .op {
 	background: rgba(255,255,255,0.8);
 
